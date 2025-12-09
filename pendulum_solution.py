@@ -1,32 +1,32 @@
-"""
-Solution
-"""
-def pendulum_solution():
-    t = sp.symbols('t')
-    m, l, g = sp.symbols('m l g', positive=True)
-    theta = sp.Function('theta')(t)
-    theta_dot = sp.diff(theta, t)
+import sympy as sp
 
-    T = sp.Rational(1, 2) * m * l**2 * theta_dot**2
-    V = m * g * l * (1 - sp.cos(theta))
-    L = T - V
+t = sp.symbols('t')
 
-    print("=== Simple pendulum solution ===")
-    print("Lagrangian L = T − V:")
-    sp.pprint(L)
-    print()
+m, l, g = sp.symbols('m l g', positive=True)
 
-    EL = euler_lagrange(L, theta, t)
-    print("Euler–Lagrange equation:")
-    sp.pprint(sp.Eq(EL, 0))
-    print()
+theta = sp.Function('theta')(t)
 
-    EL_simpler = sp.simplify(EL / (m * l))
-    print("Dividing out ml gives:")
-    sp.pprint(sp.Eq(EL_simpler, 0))
-    print()
+theta_dot = sp.diff(theta, t)
 
-    EL_small = sp.simplify(EL_simpler.subs(sp.sin(theta), theta) / l)
-    print("Small-angle approximation (sin θ ≈ θ):")
-    sp.pprint(sp.Eq(EL_small, 0))
-    print("\nThis has the same form as the SHO with ω^2 = g/l.\n")
+T = sp.Rational(1, 2) * m * l**2 * theta_dot**2
+V = m * g * l * (1 - sp.cos(theta))
+L = T - V
+
+
+dL_dtheta = sp.diff(L, theta)
+dL_dthetadot = sp.diff(L, theta_dot)
+d_dt_dL_dthetadot = sp.diff(dL_dthetadot, t)
+
+
+EL = sp.simplify(d_dt_dL_dthetadot - dL_dtheta)
+print("Euler–Lagrange equation:" )
+print(EL)
+
+EL_simpler = sp.simplify((EL) / (m * l))
+print("Dividing out ml gives:")
+print(EL_simpler)
+
+EL_small = sp.simplify(EL_simpler.subs(sp.sin(theta), theta) / l)
+print("Small-angle approximation (sin theta approx= theta):")
+print(EL_small)
+
