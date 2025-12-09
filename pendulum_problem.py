@@ -1,7 +1,6 @@
 def pendulum_problem():
     """
-    Problem statement for the class:
-
+    Problem:
     A point mass m is attached to a massless rod of length l and swings
     in a vertical plane under gravity g. Let θ(t) be the angle from the
     downward vertical.
@@ -9,10 +8,9 @@ def pendulum_problem():
     (a) Write down the kinetic energy T and potential energy V of the
         pendulum in terms of θ(t), dθ/dt, m, l, and g.
 
-    (b) Form the Lagrangian L = T − V and use the euler_lagrange()
-        helper to derive the equation of motion.
+    (b) Form the Lagrangian and derive the equation of motion.
 
-    (c) Use a small-angle approximation sin θ ≈ θ to obtain the linearized
+    (c) Use a small-angle approximation to obtain the linearized
         equation of motion.
 
     """
@@ -28,7 +26,6 @@ def pendulum_problem():
     T = 
 
     # TODO 3: potential energy V. Take V = 0 at the bottom.
-    # A convenient choice is V = m g l (1 − cos θ)
     V = 
 
     # TODO 4: Lagrangian
