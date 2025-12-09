@@ -25,11 +25,9 @@ theta = sp.Function('theta')(t)
 theta_dot = 
 
 # TODO 2: kinetic energy T of a simple pendulum.
-# Hint: speed v of the mass is v = l * θ_dot
 T = 
 
 # TODO 3: potential energy V. Take V = 0 at the bottom.
-# A convenient choice is V = m g l (1 − cos θ)
 V = 
 
 # TODO 4: Lagrangian
