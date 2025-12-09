@@ -20,7 +20,7 @@ code pendulum_problem.py
 ```
 4. After you've completed filling in the code, compare your result to the solution:
 ```bash
-code pendulum_solution.py
+python pendulum_solution.py
 ```
 * If you need to reference demo code:
 ```bash
