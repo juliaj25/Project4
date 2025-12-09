@@ -1,6 +1,5 @@
 # SymPy Tutorial
 
-Goal: Use SymPy to perform the Euler–Lagrange equation to find the equation of motion for a pendulum
 
 ## Instructions
 
