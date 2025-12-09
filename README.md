@@ -11,7 +11,7 @@ pip install sympy
 2. Clone the repository:
 
 ```bash
-git clone 
+git clone https://github.com/juliaj25/Project4.git
 cd Project4
 ```
 3. Fill in code to solve problem:
@@ -20,7 +20,7 @@ cd Project4
 code pendulum_problem.py
 ```
 
-* If you need to refernence demo code:
+* If you need to reference demo code:
 ```bash
 code demo.py
 ```
