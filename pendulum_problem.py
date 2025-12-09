@@ -13,7 +13,7 @@ def pendulum_problem():
         helper to derive the equation of motion.
 
     (c) Use a small-angle approximation sin θ ≈ θ to obtain the linearized
-        equation of motion and compare it with the harmonic oscillator.
+        equation of motion.
 
     """
     t = sp.symbols('t')
